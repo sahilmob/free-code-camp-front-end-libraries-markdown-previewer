@@ -12,6 +12,12 @@
     <textarea name="" id="editor" cols="30" rows="10"></textarea>
     <div id="preview"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.5.0/marked.js"></script>
+    <script>
+        var editor = document.getElementById('editor')
+        editor.addEventListener('input', function () {
+            document.getElementById("preview").innerHTML = marked(event.target.value)
+        })
+    </script>
 </body>
 
 </html>
